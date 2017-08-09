@@ -1,6 +1,5 @@
 use expertsys;
 
-set sql_safe_updates = 0;
 
 delete from userbase;
 delete from contact;
