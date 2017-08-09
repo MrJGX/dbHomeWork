@@ -1,7 +1,7 @@
 use expertsys;
 
 
-drop table if exists userBase;
+
 drop table if exists contact;
 drop table if exists certificate;
 drop table if exists education;
