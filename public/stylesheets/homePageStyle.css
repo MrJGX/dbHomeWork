@@ -1,0 +1,28 @@
+#homePageTable th{
+    align-content: center;
+}
+
+
+#homePageTable {
+    border: 0 ;
+    border-collapse: collapse;
+    width: 1188px;
+    height:auto;
+}
+
+td{
+    height:30px;
+    width:296px;
+}
+
+tr,td{
+     border:solid 1px #5c5d63;
+ }
+
+th{
+    font-size: 20px;
+}
+
+td ol{
+    list-style-type: decimal;
+}

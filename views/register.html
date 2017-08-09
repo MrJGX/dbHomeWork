@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel = "stylesheet" type = "text/css" href="/stylesheets/register.css"/>
+    <script type = "text/javascript" src = "/javascripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src = "/javascripts/register.js"></script>
+
+</head>
+<body>
+<fieldset class = "registerField">
+
+    <div class = "registerTitle">
+        <h2 id = "registerFont">教育研究院专家征集系统——专家注册</h2>
+    </div>
+
+    <div>
+        <label class = "registerSelect " for = "registerName" >用户名：</label>
+        <input type="text" id = "registerName" class = "fillContent" maxlength="20"/>
+    </div>
+
+    <div class = "ps"> 请输入5-20个字母开头、可带数字、“_”、“."的字符</div>
+
+    <div>
+        <label class = "registerSelect" for = "registerPassword">密码：</label>
+        <input type="password" id = "registerPassword" class = "fillContent" maxlength="20"/>
+    </div>
+
+    <div class = "ps"> 密码由6-20个字符组成、区分大小写</div>
+
+    <div>
+        <label class = "registerSelect" for = "passwordConfirm">密码确认：</label>
+        <input type="password" id = "passwordConfirm" class = "fillContent" maxlength="20"/>
+    </div>
+
+    <div>
+        <button type = "button" id = "registerConfirm">注册</button>
+        <button type = "button" id = "reset">重置</button>
+    </div>
+
+
+</fieldset>
+</body>
+</html>

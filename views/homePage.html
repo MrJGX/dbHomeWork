@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel = stylesheet type="text/css" href="/stylesheets/homePageStyle.css"/>
+    <script type="text/javascript" src = "javascripts/jquery-3.2.1.min.js"></script>
+    <script>
+        for(var i = 0;i < 27; i++){
+            $("#addEmpty").append("<br/>");
+        }
+    </script>
+</head>
+<body>
+    <table id = "homePageTable">
+        <tr>
+            <th><p>填表说明</p></th>
+        </tr>
+
+        <tr>
+            <td colspan="4" rowspan="20">
+                <ol>
+                    <li>
+                        <p>带*为必填项。</p>
+                    </li>
+
+                    <li>
+                        <p>证书编号和证书有效时间由管理员审核通过后填写，用户不得自己填写。</p>
+                    </li>
+
+                    <li>
+                        <p>出生日期从日历中选择，用户不得自己填写。</p>
+                    </li>
+
+                    <li>
+                        <p>工作经历的开始时间、终止时间：从日历中选择，用户不得自己填写。</p>
+                    </li>
+
+                    <li id = "addEmpty">
+                        回避单位是用户曾经工作过的单位或者是正在工作的单位。
+                    </li>
+                </ol>
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>

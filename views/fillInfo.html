@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+    <!--<script type="text/javascript" src = "../public/javascripts/jquery-3.2.1.min.js"></script>-->
+    <!--<link rel = stylesheet type = "text/css" href="../public/stylesheets/fillInfoStyle.css"/>-->
+    <script type="text/javascript" src = "javascripts/jquery-3.2.1.min.js"></script>
+    <link rel = stylesheet type = "text/css" href="stylesheets/fillInfoStyle.css"/>
+    <script type="text/javascript" src = "javascripts/fillInfo.js"></script>
+</head>
+<body>
+        <table id = "baseTable" >
+
+            <tr >
+                <td colspan="4">
+                    <div class = modifyButton>
+                        <button class = "infoEditButton" type="button">编辑</button>
+                        <button class = "infoSaveButton "type="button">保存</button>
+                        <button class = "infoSubmitButton" type="button">提交</button>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="4" align="left">基本信息</th>
+            </tr>
+
+            <tr>
+                <td align="left">专家信息编号：</td>
+                <td><input type="text" id = "expertID" class = "disabled"/></td>
+                <td align="right">状态：</td>
+                <td><input type="text" id = "state" class = "disabled"/></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"  rowspan="4" >
+                    <table>
+                        <tr>
+                            <td align = "left">证书有效时间：</td>
+                            <td><input type = "text" id = "validTime" class = "disabled"/></td>
+                        </tr>
+
+                        <tr>
+                            <td align="left" >专家姓名：</td>
+                            <td><input type = "text"  class = "mustFill" id = "name"/></td>
+                        </tr>
+
+                        <tr>
+                            <td align="left" >专家姓别：</td>
+                            <td>
+                                <select class = "mustFill" id = "gender">
+                                    <option selected="selected"></option>
+                                    <option>男</option>
+                                    <option>女</option>
+                                </select>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td align="left" >出生日期：</td>
+                            <td><input type = "date" class = "mustFill" id = "birthday" /></td>
+                        </tr>
+                    </table>
+                </td>
+
+
+                 <td  colspan="2" rowspan="4"  style="text-align: center" >
+                    <img alt = "专家照片" title = "上传图片" id = "picLocation" />
+                 </td>
+
+            </tr>
+
+            <!--//补全行-->
+            <tr></tr><tr></tr><tr></tr>
+
+            <tr>
+                <td >政治面貌：</td>
+                <td><input type="text" class="mustFill" id = "politics"/> </td>
+                <td align="right" >证件类型：</td>
+                <td>
+                    <select class="mustFill" id = "Ctype" >
+                        <option selected="selected"></option>
+                        <option>居民身份证 </option>
+                        <option>港澳通行证</option>
+                        <option>居民户口溥</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="left">颁发机构：</td>
+                <td><input type="text" class="mustFill" id = "issue"/></td>
+                <td align="right">证件编号：</td>
+                <td><input type="text" class="mustFill" id = "CID"/></td>
+            </tr>
+
+            <tr>
+                <td >最高学历：</td>
+                <td>
+                    <select class="mustFill" id = "educationBack">
+                        <option selected="selected"></option>
+                        <option>小学 </option>
+                        <option>初中 </option>
+                        <option>高中 </option>
+                        <option>大专 </option>
+                        <option>大学 </option>
+                        <option>硕士研究生</option>
+                        <option>博士研究生</option>
+                    </select>
+                </td>
+                <td align="right">最高学位：</td>
+                <td>
+                    <select class="mustFill" id = "degree">
+                        <option selected="selected"></option>
+                        <option>学士 </option>
+                        <option>硕士</option>
+                        <option>博士</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="left">职称：</td>
+                <td><input type="text" class="mustFill" id = "workTitle"/></td>
+                <td align="right">证书编号：</td>
+                <td><input type="text" class="mustFill" id = "EID"/></td>
+            </tr>
+
+
+            <tr>
+                <td >职务：</td>
+                <td><input type="text" class="mustFill" id = "workDuty"/> </td>
+                <td align="right">从业时长：</td>
+                <td>
+                    <select id = "workDuration">
+                        <option selected="selected"></option>
+                        <option>1年以上 </option>
+                        <option>2年以上</option>
+                        <option>3年以上</option>
+                        <option>4年以上</option>
+                        <option>5年以上</option>
+                    </select>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td >是否退休：</td>
+                <td>
+                    <select class="mustFill" id = "ifRetire">
+                        <option selected="selected"></option>
+                        <option>是 </option>
+                        <option>否 </option>
+
+                    </select>
+                </td>
+                <td align="right">是否兼职：</td>
+                <td>
+                    <select class="mustFill" id = "ifPartTime">
+                        <option selected="selected"></option>
+                        <option>是 </option>
+                        <option>否</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>工作单位：</td>
+                <td colspan="3"><input type="text" style="width:750px " class="mustFill" id = "workplace"/></td>
+            </tr>
+
+            <tr>
+                <td>详细通信地址：</td>
+                <td colspan="3"><input type="text" class="mustFill" style="width:750px " id = "address"/></td>
+            </tr>
+
+            <tr>
+                <td align="left">邮政编码：</td>
+                <td><input type="text" class="mustFill" id = "zipCode"/></td>
+                <td align="right">电子邮箱：</td>
+                <td><input type="text" class="mustFill" id = "email"/></td>
+            </tr>
+
+            <tr>
+                <td align="left">移动电话：</td>
+                <td><input type="text" class="mustFill" id = "mobilePhone"/></td>
+                <td align="right">家庭电话：</td>
+                <td><input type="text" class="mustFill" id = "homePhone"/></td>
+            </tr>
+
+            <tr>
+                <td>毕业院校及专业：</td>
+                <td colspan="3"><input type="text"  class="mustFill" style="width:750px " id = "schoolMajor"/></td>
+            </tr>
+
+             <tr>
+                 <td>资格证书名及编号：</td>
+                 <td ><table class = "qualifyName"></table></td>
+                 <td ><table class = "qualifyNum"></table></td>
+                 <td >
+                     <table class = "qualifyButton">
+                        <tr>
+                            <td>
+                                <button id = "addQualify"> 添加资格证书</button>
+                                <button class = "deleteQualify">删除</button>
+                            </td>
+                        </tr>
+                     </table>
+
+                 </td>
+             </tr>
+
+             <tr>
+                 <td>评审领域：</td>
+                 <td><input type="text"  class="mustFill" id = "reviewField" /></td>
+                 <td>
+                     <button id = "selectReview">选择评审领域</button>
+                 </td>
+                 <td></td>
+             </tr>
+
+             <tr>
+                 <th colspan="4" align="left" >
+                     评估/评审经历
+                     <button id = "addReview">增加评估/评审经历</button>
+                 </th>
+             </tr>
+
+            <tr>
+                <td colspan="4">
+                    <table class = "reviewTable">
+                        <tr class = "subTableHead">
+                            <td>时间</td>
+                            <td>任务名称</td>
+                            <td>任务描述</td>
+                            <td>任务类型</td>
+                            <td>操作</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="4" align="left" >
+                    工作经历
+                    <button id = "addWork">增加工作经历</button>
+                </th>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <table class = "workTable">
+                        <tr class = "subTableHead">
+                            <td>起始时间</td>
+                            <td>终止时间</td>
+                            <td>工作单位</td>
+                            <td>职务</td>
+                            <td>证明人</td>
+                            <td>操作</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+
+            <tr>
+                <th colspan="4" align="left" >
+                    业务专长
+                   <small style="font-weight: normal;font-size: 15px" >
+                       (不超过300字）
+                   </small>
+                </th>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <textarea id = "speciality"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="4" align="left" >
+                    工作业绩
+                    <small style="font-weight: normal;font-size: 15px">
+                        (不超过300字）
+                    </small>
+                </th>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <textarea id = "performance"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="4" align="left" >
+                    回避单位
+                    <button id = "addAvoid">增加回避单位</button>
+                </th>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <table class = "avoidTable">
+                        <tr class = "subTableHead">
+                            <td class = "avoidName">单位名称</td>
+                            <td>是否工作单位</td>
+                            <td>操作</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="4" align="left" >
+                    其他说明
+                    <small style="font-weight: normal;font-size: 15px">
+                        (不超过300字）
+                    </small>
+                </th>
+            </tr>
+
+
+            <tr>
+                <td colspan="4">
+                    <textarea id = "other"></textarea>
+                </td>
+            </tr>
+
+
+            <tr >
+                <td colspan="4">
+                    <div class = modifyButton>
+                        <button class = "infoEditButton"type="button">编辑</button>
+                        <button class = "infoSaveButton" type="button">保存</button>
+                        <button class = "infoSubmitButton" type="button">提交</button>
+                    </div>
+                </td>
+            </tr>
+
+         </table>
+
+        <!--增加评审领域的窗口-->
+        <div id = "subWindow" >
+
+            <div id = "moveAble">
+                <small style="margin-left: 5px;color:#ff533a">评审领域最多选择2项！</small>
+                <button class = "WinButton" id = "closeW">关闭</button>
+                <button class = "WinButton" id = "confirmW">确认</button>
+            </div>
+
+            <table>
+                <tr>
+                    <td class = "review">
+                        <button value = '幼儿园教育评估' ></button>
+                        <label>幼儿园教育评估</label>
+                    </td>
+
+                    <td class = "review">
+                        <button value = '小学教育评估'></button>
+                        <label>小学教育评估</label>
+                    </td >
+
+                    <td class = "review">
+                        <button value = '中学教育评估'></button>
+                        <label>中学教育评估</label>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td class = "review">
+                        <button value = "中职教育评估"></button>
+                        <label>中职教育评估</label>
+                    </td>
+
+                    <td class = "review">
+                        <button value = "高职教育评估"></button>
+                        <label>高职教育评估</label>
+                    </td>
+
+                    <td class = "review">
+                        <button value = "高校教育评估"></button>
+                        <label>高校教育评估</label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--文件上传控件-->
+        <form method="post" enctype="multipart/form-data" id = "fileForm">
+            <input type="file" name = "upLoadPic" id = "upLoadPic" title = "上传照片">
+        </form>
+
+</body>
+</html>

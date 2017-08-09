@@ -1,0 +1,43 @@
+
+#title{
+    background-color: #a489f7;
+    color: #ffd02e;
+    text-align: center;
+    font-size: 35px;
+    height:40px;
+    width:1340px;
+}
+
+.subTitle{
+    color: #525253;
+    border-bottom: 2px #929aff solid;
+    height:30px;
+
+}
+
+.subTitle p{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+#body{
+    height:590px;
+}
+
+#navigation{
+
+    position: absolute;
+    top:60px;
+
+    background-color: #b4c2ff;
+    width: 140px;
+    height: inherit;
+}
+
+.subHtml{
+    position: absolute;
+    left:160px;
+    top: 60px;
+    height: auto;
+}
+

@@ -1,0 +1,126 @@
+table button{
+    margin: 2px 2px 2px 2px;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+
+#baseTable{
+    border: 0 ;
+    border-collapse: collapse;
+    width: 0;
+}
+
+
+td{
+    height:30px;
+    width:295px;
+}
+
+textarea{
+    margin: -1px;
+    width: 1180px;
+    height: 100px;
+    font-size: 15px;
+    background-color: inherit;
+}
+
+
+td table{
+    margin: -2px;
+    border:0;
+    border-collapse: collapse;
+}
+
+td input{
+    width:230px;
+    height:20px;
+    /*background: #f6f8f6;*/
+    /*border-radius: 2px;*/
+    background-color: inherit;
+    border:none;
+
+}
+
+td select{
+    background-color: inherit;
+    border-radius: 2px;
+    border:1px #c8cac8 solid;
+    width:150px;
+    height:20px;
+}
+
+th{
+    background: #5193ff;
+    font-size: 20px;
+}
+
+tr,td{
+    border:solid 1px #5c5d63;
+}
+
+
+.subTableHead{
+    text-align: center;
+}
+
+
+#subWindow{
+    position:absolute;
+    left:500px;
+    top:500px;
+    width: auto;
+    height: auto;
+    background-color: #cac6ff;
+    border: 1px #474b4b ridge;
+    display: none;
+
+}
+
+#subWindow table{
+    border-collapse: collapse;
+    margin:0 5px 5px 5px;
+    width: 550px;
+
+}
+
+.WinButton{
+    cursor: pointer;
+    border-radius: 1px;
+    margin:2px 5px 2px 5px;
+    float: right;
+}
+
+.review button{
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    float: right;
+
+}
+
+#moveAble{
+    cursor: move;
+    padding-bottom: 5px;
+}
+
+.avoidName{
+    width:588px;
+}
+
+
+
+/*图片css*/
+#upLoadPic{
+    position:absolute;
+    /*透明度*/
+    opacity: 0;
+    left: 827px;
+    top: 94px;
+}
+#picLocation,#upLoadPic{
+    height: 123px;
+    width: 123px;
+    border: 1px solid #474b4b;
+    cursor: pointer;
+}

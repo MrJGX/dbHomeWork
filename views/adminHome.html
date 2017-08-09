@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adminHome</title>
+    <!--<link rel = stylesheet type = "text/css" href="../public/stylesheets/homeStyle.css"/>-->
+    <link rel = stylesheet type = "text/css" href="stylesheets/homeStyle.css"/>
+    <link rel = stylesheet type = 'text/css' href = "stylesheets/adminHomeStyle.css"/>
+
+    <script type = "text/javascript" src = "/javascripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/adminHome.js"></script>
+</head>
+<body>
+
+<div id = "title">
+    专家征集系统
+</div>
+<div id = "body">
+    <div id = "navigation">
+        <div class = "subTitle" ><p id = "adminHomePage">首页</p></div>
+        <div class = "subTitle"><p  id = "manage">专家信息维护</p></div>
+        <div class = "subTitle"><p id = "detailInfo">专家详细信息</p></div>
+    </div>
+
+    <div class = "subHtml" id = "adminHomeDiv">
+        <h2 id = "amount" align="center"></h2>
+    </div>
+
+    <div class = "subHtml" id = "manageDiv">
+        <div id = "queryDiv">
+            <label class = "queryLabel" for = "reviewQuery">评审领域 &nbsp;&nbsp;</label>
+            <select  id = "reviewQuery">
+                <option selected="selected"></option>
+                <option>幼儿园教育评估</option>
+                <option>小学教育评估</option>
+                <option>中学教育评估</option>
+                <option>中职教育评估</option>
+                <option>高职教育评估</option>
+                <option>高校教育评估</option>
+            </select>
+            <label class = "queryLabel" for = "stateQuery">状态&nbsp;&nbsp;</label>
+            <select  id = "stateQuery">
+                <option selected="selected"></option>
+                <option>可用</option>
+                <option>填写中</option>
+                <option>待审核</option>
+                <option>失效</option>
+                <option>已驳回</option>
+                <option>已终止</option>
+            </select>
+            <button id = "queryButton">查询</button>
+        </div>
+
+
+        <table id = "queryTable">
+            <tr>
+                <th>专家编号</th>
+                <th>专家名</th>
+                <th>工作单位</th>
+                <th>联系电话</th>
+                <th>入库类型</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+        </table>
+
+
+
+
+    </div>
+
+    <div class = "subHtml" id = "detailInfoDiv" style="border: none">
+        <table class = "detailTable" >
+
+            <tr >
+                <td colspan="4">
+                    <div class = modifyButton>
+                        <button class = "agree" type="button">同意申请</button>
+                        <button class = "reject" type="button">驳回申请</button>
+                        <button class = "end" type="button">终止资格</button>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="4" align="left">基本信息</th>
+            </tr>
+
+            <tr>
+                <td align="left">专家信息编号：</td>
+                <td id = "expertID" ></td>
+                <td align="right">状态：</td>
+                <td id = "state" ></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"  rowspan="4" >
+                    <table>
+                        <tr>
+                            <td align = "left">证书有效时间：</td>
+                            <td id = "validTime" ></td>
+                        </tr>
+
+                        <tr>
+                            <td align="left" >专家姓名：</td>
+                            <td id = "name"></td>
+                        </tr>
+
+                        <tr>
+                            <td align="left" >专家姓别：</td>
+                            <td id = "gender"></td>
+                        </tr>
+
+                        <tr>
+                            <td align="left" title = "色意思">出生日期：</td>
+                            <td id = "birthday" ></td>
+                        </tr>
+                    </table>
+                </td>
+
+
+                <td  colspan="2" rowspan="4"  style="text-align: center" >
+                    <img alt = "专家照片"  id = "picLocation" />
+                </td>
+
+            </tr>
+
+            <!--//补全行-->
+            <tr></tr><tr></tr><tr></tr>
+
+            <tr>
+                <td >政治面貌：</td>
+                <td id = "politics"> </td>
+                <td align="right" >证件类型：</td>
+                <td id = "Ctype"></td>
+            </tr>
+
+            <tr>
+                <td align="left">颁发机构：</td>
+                <td id = "issue"></td>
+                <td align="right">证件编号：</td>
+                <td id = "CID"></td>
+            </tr>
+
+            <tr>
+                <td >最高学历：</td>
+                <td id = "educationBack"></td>
+                <td align="right">最高学位：</td>
+                <td id = "degree"></td>
+            </tr>
+
+            <tr>
+                <td align="left">职称：</td>
+                <td id = "workTitle"></td>
+                <td align="right">证书编号：</td>
+                <td id = "EID"></td>
+            </tr>
+
+            <tr>
+                <td >职务：</td>
+                <td id = "workDuty"> </td>
+                <td align="right">从业时长：</td>
+                <td id = "workDuration"></td>
+            </tr>
+
+            <tr>
+                <td >是否退休：</td>
+                <td id = "ifRetire"></td>
+                <td align="right">是否兼职：</td>
+                <td id = "ifPartTime"></td>
+            </tr>
+
+            <tr>
+                <td>工作单位：</td>
+                <td colspan="3" id = "workplace"></td>
+            </tr>
+
+            <tr>
+                <td>详细通信地址：</td>
+                <td colspan="3" id = "address"></td>
+            </tr>
+
+            <tr>
+                <td align="left">邮政编码：</td>
+                <td id = "zipCode"></td>
+                <td align="right">电子邮箱：</td>
+                <td id = "email"></td>
+            </tr>
+
+            <tr>
+                <td align="left">移动电话：</td>
+                <td id = "mobilePhone"></td>
+                <td align="right">家庭电话：</td>
+                <td id = "homePhone"></td>
+            </tr>
+
+            <tr>
+                <td>毕业院校及专业：</td>
+                <td colspan="3" id = "schoolMajor"></td>
+            </tr>
+
+            <tr>
+                <td>资格证书名及编号：</td>
+                <td ><table class = "qualifyName"></table></td>
+                <td ><table class = "qualifyNum"></table></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>评审领域：</td>
+                <td id = "reviewField" ></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th colspan="4" align="left" >
+                    评估/评审经历
+                </th>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <table class = "reviewTable">
+                        <tr class = "subTableHead">
+                            <td>时间</td>
+                            <td>任务名称</td>
+                            <td>任务描述</td>
+                            <td>任务类型</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="4" align="left" >
+                    工作经历
+                </th>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <table class = "workTable">
+                        <tr class = "subTableHead">
+                            <td>起始时间</td>
+                            <td>终止时间</td>
+                            <td>工作单位</td>
+                            <td>职务</td>
+                            <td>证明人</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+
+            <tr>
+                <th colspan="4" align="left" >
+                    业务专长
+                    <small style="font-weight: normal;font-size: 15px" >
+                        (不超过300字）
+                    </small>
+                </th>
+            </tr>
+
+            <tr>
+                <td colspan="4" >
+                    <textarea id = "speciality"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="4" align="left" >
+                    工作业绩
+                    <small style="font-weight: normal;font-size: 15px">
+                        (不超过300字）
+                    </small>
+                </th>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <textarea id = "performance"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="4" align="left" >
+                    回避单位
+                </th>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <table class = "avoidTable">
+                        <tr class = "subTableHead">
+                            <td class = "avoidName">单位名称</td>
+                            <td>是否工作单位</td>
+                            <td></td><td></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="4" align="left" >
+                    其他说明
+                    <small style="font-weight: normal;font-size: 15px">
+                        (不超过300字）
+                    </small>
+                </th>
+            </tr>
+
+
+            <tr>
+                <td colspan="4">
+                    <textarea id = "other"></textarea>
+                </td>
+            </tr>
+
+            <tr >
+                <td colspan="4">
+                    <div class = modifyButton>
+                        <button class = "agree" type="button">同意申请</button>
+                        <button class = "reject" type="button">驳回申请</button>
+                        <button class = "end" type="button">终止资格</button>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>

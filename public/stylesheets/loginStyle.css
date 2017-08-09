@@ -1,0 +1,47 @@
+body{
+    background-color: #89a3ff;
+}
+
+.loginField{
+    background-color: #bdc5ff;
+    height:300px;
+    width: 500px;
+    margin-left:25%;
+    padding-top:1px;
+    margin-top:10%;//外边距
+
+
+}
+
+.loginSelect{
+    height:20px;
+    width:140px;
+    display:inline-block;
+    text-align: center;
+    margin-left:18%;
+    margin-top:3%;//外边距
+}
+
+.loginTitle{
+    background-color: #ffde53;
+    color: #ffffff;
+    border-radius:5px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top:-2%;
+}
+
+.FillContent{
+    width:150px;
+}
+
+#loginButton{
+    margin-left: 28%;
+    margin-top: 4%;
+}
+
+#registerButton{
+    margin-left:25%;
+}
